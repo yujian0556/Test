@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VideoCell" id="gTV-IL-0wX" customClass="ZRTVideoCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="164" height="127"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="164" height="127"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XYQ-C9-vFR">
+                        <rect key="frame" x="10" y="0.0" width="148" height="83"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="XYQ-C9-vFR" secondAttribute="height" multiplier="148:83" id="bJB-9T-xlA"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="视频名称" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMm-bt-frL">
+                        <rect key="frame" x="8" y="85" width="148" height="42"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="42" id="RJU-LQ-VHX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="播放数量,评论数量" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjz-hl-9Mr">
+                        <rect key="frame" x="8" y="106" width="148" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <animations/>
+            <constraints>
+                <constraint firstItem="jjz-hl-9Mr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="1La-Wk-rRP"/>
+                <constraint firstAttribute="bottom" secondItem="jjz-hl-9Mr" secondAttribute="bottom" id="CDG-jU-cbM"/>
+                <constraint firstItem="KMm-bt-frL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="DJc-70-bqj"/>
+                <constraint firstItem="XYQ-C9-vFR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="F44-SV-y2E"/>
+                <constraint firstItem="jjz-hl-9Mr" firstAttribute="top" secondItem="KMm-bt-frL" secondAttribute="bottom" constant="-21" id="QKk-jt-hpt"/>
+                <constraint firstItem="XYQ-C9-vFR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Seo-LB-NxU"/>
+                <constraint firstAttribute="trailing" secondItem="jjz-hl-9Mr" secondAttribute="trailing" constant="8" id="dxB-7B-fQc"/>
+                <constraint firstAttribute="trailing" secondItem="XYQ-C9-vFR" secondAttribute="trailing" constant="6" id="mwn-br-QcF"/>
+                <constraint firstAttribute="trailing" secondItem="KMm-bt-frL" secondAttribute="trailing" constant="8" id="s7q-zn-xWA"/>
+                <constraint firstItem="KMm-bt-frL" firstAttribute="top" secondItem="XYQ-C9-vFR" secondAttribute="bottom" constant="2" id="tzL-vs-okP"/>
+            </constraints>
+            <size key="customSize" width="158" height="83"/>
+            <connections>
+                <outlet property="PlayAndCommentNumberLabel" destination="jjz-hl-9Mr" id="La6-oA-wkm"/>
+                <outlet property="VideoNameLabel" destination="KMm-bt-frL" id="I8E-zm-BB5"/>
+                <outlet property="image" destination="XYQ-C9-vFR" id="2rn-S1-MOB"/>
+            </connections>
+            <point key="canvasLocation" x="373" y="373.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

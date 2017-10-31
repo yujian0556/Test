@@ -1,0 +1,91 @@
+//
+//  zhiren.pch
+//  yiwen
+//
+//  Created by moyifan on 15/4/14.
+//  Copyright (c) 2015年 moyifan. All rights reserved.
+//
+
+#ifndef yiwen_zhiren_pch
+#define yiwen_zhiren_pch
+
+
+#import "UIView+AdjustFrame.h"
+#import "UIImage+YFImge.h"
+#import "UIBarButtonItem+YFItem.h"
+#import "NSString+Regex.h"
+#import "NSDictionary+JsonDic.h"
+
+#import "OZHNetWork.h"
+
+#import <RongIMKit/RongIMKit.h>
+
+#include "avformat.h"
+
+
+
+
+#define ZRTKeyWindow  [UIApplication sharedApplication].keyWindow
+
+#define KScreenWidth [[UIScreen mainScreen] bounds].size.width
+#define KScreenHeight [[UIScreen mainScreen] bounds].size.height
+
+//选择按钮属性
+#define KSelectionBtnsWidth 90
+#define KSelectionBtnsHeight 20
+
+//朋友圈图片属性
+#define KPictureSize KScreenWidth == 375 ? 80 : 75
+#define KPictureOrignX 90
+#define KpictureOrignY 90
+
+//颜色
+#define KMainColor [UIColor colorWithRed:1/256.0 green:152/256.0 blue:169/256.0 alpha:1]
+#define KGrayColor [UIColor colorWithRed:237/256.0 green:237/256.0 blue:237/256.0 alpha:1]
+#define KdetailSectionColor [UIColor colorWithRed:67/256.0 green:173/256.0 blue:155/256.0 alpha:1]
+#define KdetailTitleColor [UIColor colorWithRed:66/256.0 green:178/256.0 blue:158/256.0 alpha:1]
+#define KredColor [UIColor colorWithRed:245/256.0 green:121/256.0 blue:125/256.0 alpha:1]
+#define Kdivide [UIColor colorWithRed:224/256.0 green:225/256.0 blue:226/256.0 alpha:1]
+#define KHealthyColor [UIColor colorWithRed:179/256.0 green:225/256.0 blue:227/256.0 alpha:1]
+
+#define KcompiledColor [UIColor colorWithRed:80/256.0 green:185/256.0 blue:171/256.0 alpha:1]
+#define KdeleteColor [UIColor colorWithRed:255/256.0 green:81/256.0 blue:81/256.0 alpha:1]
+#define KLineColor [UIColor colorWithRed:236/256.0 green:156/256.0 blue:75/256.0 alpha:1]
+
+#define KTimeColor [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1]
+
+#define DEFAULT [NSUserDefaults standardUserDefaults]
+
+#define isAllUserLogin [[DEFAULT objectForKey:@"isLogin"] boolValue]
+#define USERID [NSString stringWithFormat:@"userid=%@",[DEFAULT objectForKey:@"UserDict"][@"Id"]]
+
+#define NotLoginSTRWHERE _selectSectionOffice == NO ? @"" : [NSString stringWithFormat:@"classid=%@",[self.sectionOfficeDataSource[_sectionOfficeRow] Id]]
+#define STRWHERE _selectSectionOffice == NO ? USERID : [NSString stringWithFormat:@"%@,classid=%@",USERID,[self.sectionOfficeDataSource[_sectionOfficeRow] Id]]
+
+#define KRGBColor(a,b,c) [UIColor colorWithRed:a/256.0 green:b/256.0 blue:c/256.0 alpha:1]
+
+//通知
+static NSString *ScrollViewDidEndScroll = @"ScrollViewDidEndScroll";
+static NSString *NavigationTitleChangedNotification = @"ChangeNavigationTitle";
+
+//#warning 上线之前要替换(已经替换完成)
+#define APPKEY    @"uwd1c0sxd3lh1"  //pvxdm17jx82kr
+#define APPSecret    @"SAPzkcwHwlWw" //UhytQrAR8Ot
+
+// 自定义Log
+#ifdef DEBUG
+
+#define WCLog(...) NSLog(@"%s %d \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+
+#else
+#define WCLog(...)
+
+#endif
+
+
+#define IPHONE6P KScreenHeight == 736
+
+#define ImagePath @"http://www.yddmi.com/images/WallImages/imagepath/"
+
+
+#endif

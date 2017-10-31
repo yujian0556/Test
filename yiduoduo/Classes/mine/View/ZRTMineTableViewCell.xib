@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ZRTMineTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的发布" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7n-yA-eqd">
+                        <rect key="frame" x="45" y="11" width="89" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="V8e-Ee-SHg"/>
+                            <constraint firstAttribute="width" constant="89" id="lWi-hS-XES"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Gv-rC-yVn">
+                        <rect key="frame" x="10" y="11" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="2hM-Sn-0Ii"/>
+                            <constraint firstAttribute="width" constant="20" id="ZU3-bN-LMw"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_06.png" translatesAutoresizingMaskIntoConstraints="NO" id="OlJ-OU-Ayd">
+                        <rect key="frame" x="297" y="16" width="7" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="7" id="5vU-Nw-pAr"/>
+                            <constraint firstAttribute="height" constant="12" id="KPE-Co-e0l"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine_icon_reddot_default" translatesAutoresizingMaskIntoConstraints="NO" id="uP8-sh-PGY">
+                        <rect key="frame" x="124" y="8" width="8" height="8"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="8" id="XrZ-jW-Tvt"/>
+                            <constraint firstAttribute="height" constant="8" id="oNS-Br-TLY"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2Gv-rC-yVn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="1gI-sr-4wf"/>
+                    <constraint firstItem="O7n-yA-eqd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="Djb-4v-Ukn"/>
+                    <constraint firstItem="OlJ-OU-Ayd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="Eeu-7c-rML"/>
+                    <constraint firstItem="O7n-yA-eqd" firstAttribute="leading" secondItem="2Gv-rC-yVn" secondAttribute="trailing" constant="15" id="OnW-EK-N7K"/>
+                    <constraint firstItem="2Gv-rC-yVn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="UeQ-1Q-rD2"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="OlJ-OU-Ayd" secondAttribute="trailing" constant="8" id="o2e-lG-BZu"/>
+                    <constraint firstItem="uP8-sh-PGY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="siH-9J-YYo"/>
+                    <constraint firstItem="uP8-sh-PGY" firstAttribute="leading" secondItem="O7n-yA-eqd" secondAttribute="trailing" constant="-10" id="vWW-9P-wGI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="image" destination="2Gv-rC-yVn" id="sRy-yS-uo9"/>
+                <outlet property="redPoint" destination="uP8-sh-PGY" id="47U-9C-Ky7"/>
+                <outlet property="title" destination="O7n-yA-eqd" id="prS-a1-2mg"/>
+            </connections>
+            <point key="canvasLocation" x="335" y="331"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow_06.png" width="12" height="12"/>
+        <image name="mine_icon_reddot_default" width="8" height="8"/>
+    </resources>
+</document>
